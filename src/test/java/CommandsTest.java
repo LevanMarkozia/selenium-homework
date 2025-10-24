@@ -14,7 +14,6 @@ public class CommandsTest {
         options.addArguments("--incognito");
         WebDriver driver=new ChromeDriver(options);
         Wait<WebDriver> wait=new WebDriverWait(driver, Duration.ofSeconds(15));
-
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
         driver.findElement(By.xpath("//button[@onclick='swapInput()']")).click();
 
